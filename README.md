@@ -1,5 +1,5 @@
 # Dark Chrome
-A light-weight univeral dark filter for the Google Chrome browser.
+A light-weight universal dark filter for the Google Chrome browser.
 
 # Installation
 ## Google Chrome Store
@@ -12,7 +12,7 @@ Coming soon to the Google Chrome store.
 4. Disable **Developer Mode**.
 
 # License
-The Dark Chrome browser extension is free for personal use. If you like the extension, please consider donating via Paypal.
+The Dark Chrome browser extension is free for personal use. If you like the extension, please consider donating via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=582D96R5D5CBY&source=url).
 
 # Privacy Policy
 The Dark Chrome browser extension does not collect any user data.
