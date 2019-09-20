@@ -1,0 +1,144 @@
+a:link {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  opacity: 1;
+}
+
+a:focus {
+  text-shadow: 0 0 4px black;
+  transition: 0.4s;
+}
+
+a:focus img {
+  box-shadow: 0 0 4px black;
+  transition: 0.4s;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+/* Opacity slider */
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+input:focus {
+  box-shadow: 0 0 4px black;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  border: 0;
+  background: url("../images/adjust-solid.svg") white;
+  transform: scaleX(-1);
+  cursor: pointer;
+}
+
+/* On/Off switch */
+.onoff-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.onoff-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.onoff-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d3d3d3;
+  opacity: 0.7;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.onoff-slider:hover {
+  opacity: 1;
+}
+
+.onoff-slider:before {
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  content: "";
+  background-image: url("../images/power-off-solid.svg");
+  background-size: 22px;
+  background-position: 2px 2px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+input:checked + .onoff-slider {
+  background-color: black;
+}
+
+input:focus + .onoff-slider {
+  box-shadow: 0 0 4px black;
+}
+
+input:checked + .onoff-slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.onoff-slider.round {
+  border-radius: 34px;
+}
+
+.onoff-slider.round:before {
+  border-radius: 50%;
+}
