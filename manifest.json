@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "Dark Chrome",
-  "version": "0.9.0",
+  "name": "Dark Chrome - Personal Edition",
+  "version": "0.9.1",
   "description": "Light-weight universal dark filter.",
   "icons": {
     "16": "images/icon-16.png",
