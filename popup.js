@@ -7,6 +7,9 @@ let onoffslider = document.getElementById("onoffslider");
 let sliderbox = document.getElementById("sliderbox");
 let slider = document.getElementById("slider");
 let tint = document.getElementById("tint");
+let version = document.getElementById("version");
+
+version.textContent = 'v' + chrome.runtime.getManifest().version;
 
 // single function to update all UI elements
 let updateUI = function (enabled, opacity) {
