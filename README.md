@@ -1,37 +1,28 @@
-## Welcome to GitHub Pages
+# Dark Chrome
+A light-weight univeral dark filter for the Google Chrome browser.
 
-You can use the [editor on GitHub](https://github.com/pinkelement/dark-chrome/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+# Installation
+## Google Chrome Store
+Coming soon to the Google Chrome store.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Manual installation
+1. Download and unzip the latest version from GitHub [releases page](https://github.com/pinkelement/dark-chrome/releases).
+2. Go to [chrome://extensions](chrome://extensions) and enable **Developer Mode**.
+3. Click **Load Unpacked** and select the unzipped folder.
+4. Disable **Developer Mode**.
 
-### Markdown
+# License
+The Dark Chrome browser extension is free for personal use. If you like the extension, please consider donating via Paypal.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+# Privacy Policy
+The Dark Chrome browser extension does not collect any user data.
 
-```markdown
-Syntax highlighted code block
+# Attributions
+## Icons
+"[Adjust](https://fontawesome.com/icons/adjust?style=solid)," "[chrome](https://fontawesome.com/icons/chrome?style=brands)," "[info-circle](https://fontawesome.com/icons/info-circle)," "[moon](https://fontawesome.com/icons/moon?style=solid)," "[power-off](https://fontawesome.com/icons/power-off?style=solid)" and "[sun](https://fontawesome.com/icons/sun?style=regular)" icons by [Font Awesome](https://fontawesome.com) are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
-# Header 1
-## Header 2
-### Header 3
+## Trademarks
+Google Chrome browser and icon are trademarks of Google, Inc. The use of this trademark does not indicate endorsement of the trademark holder by Pink Element, nor vice versa.
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/pinkelement/dark-chrome/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+---
+<sup>&copy; 2019 Pink Element. All rights reserved.</sup>
