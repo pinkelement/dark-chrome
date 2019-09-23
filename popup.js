@@ -41,7 +41,7 @@ chrome.storage.local.get(['enabled', 'opacity'], (data) => {
 
 // onoff controls
 onoff.oninput = () => {
-  const enabled = this.checked;
+  const enabled = onoff.checked;
   const opacity = slider.value;
 
   const iconPrefix = enabled ? 'icon' : 'iconOff';
@@ -63,7 +63,7 @@ onoff.oninput = () => {
 // slider controls
 slider.oninput = () => {
   const enabled = onoff.checked;
-  const opacity = this.value;
+  const opacity = slider.value;
 
   updateUI(enabled, opacity);
   sendMessage(enabled, opacity);
