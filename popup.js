@@ -71,7 +71,7 @@ slider.oninput = () => {
 
 // wait until user has finished fiddling with slider before saving settings
 slider.onmouseup = () => {
-  chrome.storage.local.set({ opacity: this.value });
+  chrome.storage.local.set({ opacity: slider.value });
 };
 
 // listen for updates from other popups
