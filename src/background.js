@@ -5,8 +5,10 @@
 function injectContentScript() {
   chrome.tabs.query({ url: ['*://*/*'] }, (tabs) => {
     tabs.forEach((tab) => {
-      chrome.tabs.insertCSS(tab.id, { file: 'contentScript.css' });
-      chrome.tabs.executeScript(tab.id, { file: 'contentScript.js' });
+      if (!tab.url.startsWith('https://chrome.google.com/webstore')) {
+        chrome.tabs.insertCSS(tab.id, { file: 'contentScript.css' });
+        chrome.tabs.executeScript(tab.id, { file: 'contentScript.js' });
+      }
     });
   });
 }
