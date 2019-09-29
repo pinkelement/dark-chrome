@@ -3,24 +3,23 @@
 
 // execute contentScript.js in all tabs
 function injectContentScript() {
-  chrome.tabs.query({ url: ['<all_urls>'] }, (tabs) => {
-    for (let i = 0; i < tabs.length; i += 1) {
-      chrome.tabs.executeScript(tabs[i].id, { file: 'contentScript.js' });
-    }
+  chrome.tabs.query({ url: ['*://*/*'] }, (tabs) => {
+    tabs.forEach((tab) => {
+      chrome.tabs.insertCSS(tab.id, { file: 'contentScript.css' });
+      chrome.tabs.executeScript(tab.id, { file: 'contentScript.js' });
+    });
   });
 }
 
 // run once to initialize settings
-chrome.runtime.onInstalled.addListener((details) => {
-  chrome.storage.local.get(['enabled', 'opacity'], (data) => {
+chrome.runtime.onInstalled.addListener(({ reason }) => {
+  chrome.storage.local.get(['enabled', 'opacity'], ({ enabled, opacity }) => {
     chrome.storage.local.set({
-      enabled: data.enabled == null ? true : data.enabled,
-      opacity: data.opacity == null ? 0.7 : data.opacity,
-    });
+      enabled: enabled == null ? true : enabled,
+      opacity: opacity == null ? 0.7 : opacity,
+    }, () => injectContentScript());
 
-    injectContentScript();
-
-    if (details.reason === 'install') {
+    if (reason === 'install') {
       // TODO: direct to landing page
     }
   });

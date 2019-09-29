@@ -1,6 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Dark Chrome - Personal Edition",
+  "short_name": "Dark Chrome",
   "version": "0.9.2",
   "description": "Light-weight universal dark filter.",
   "icons": {
@@ -11,7 +12,7 @@
   },
   "author": "Pink Element",
   "permissions": [
-    "activeTab",
+    "tabs",
     "management",
     "storage",
     "http://*/*",
@@ -38,6 +39,9 @@
         "<all_urls>"
       ],
       "run_at": "document_start",
+      "css": [
+        "contentScript.css"
+      ],
       "js": [
         "contentScript.js"
       ]

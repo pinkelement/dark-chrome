@@ -1,3 +1,16 @@
+/* suppress firefox scrollbars */
+body {
+  overflow: hidden;
+  user-select: none;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
 a:link {
   text-decoration: none;
   font-weight: bold;
@@ -24,13 +37,6 @@ a:focus {
 a:focus img {
   box-shadow: 0 0 4px black;
   transition: 0.4s;
-}
-
-.flex-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
 }
 
 /* Opacity slider */
@@ -65,7 +71,7 @@ input:focus {
   height: 24px;
   border-radius: 12px;
   border: 0;
-  background: url("../images/adjust-solid.svg") white;
+  background: url("images/adjust-solid.svg") white;
   transform: scaleX(-1);
   cursor: pointer;
 }
@@ -103,7 +109,7 @@ input:focus {
   opacity: 1;
 }
 
-.onoff-slider:before {
+.onoff-slider::before {
   position: absolute;
   height: 26px;
   width: 26px;
@@ -113,7 +119,7 @@ input:focus {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   content: "";
-  background-image: url("../images/power-off-solid.svg");
+  background-image: url("images/power-off-solid.svg");
   background-size: 22px;
   background-position: 2px 2px;
   background-repeat: no-repeat;
@@ -129,9 +135,8 @@ input:focus + .onoff-slider {
   box-shadow: 0 0 4px black;
 }
 
-input:checked + .onoff-slider:before {
+input:checked + .onoff-slider::before {
   -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
 
@@ -139,6 +144,6 @@ input:checked + .onoff-slider:before {
   border-radius: 34px;
 }
 
-.onoff-slider.round:before {
+.onoff-slider.round::before {
   border-radius: 50%;
 }

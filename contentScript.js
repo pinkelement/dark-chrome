@@ -1,23 +1,45 @@
 // Copyright 2019 Pink Element. All rights reserved.
 
 
-// grab existing tint element, or create new tint element if it doesn't already exist
-let tint = document.getElementById('Rej2G25SC4');
-if (tint == null) {
-  tint = document.createElement('div');
-  tint.id = 'Rej2G25SC4';
-  tint.style = 'position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index: 2147483647;background-color: black;pointer-events:none;';
-  tint.class = 'citdOverlay';
-  document.documentElement.append(tint);
-}
+const TintManager = (() => {
+  let tintDiv;
 
-// initialize tint settings
-chrome.storage.local.get(['enabled', 'opacity'], (data) => {
-  tint.style.opacity = data.enabled ? data.opacity : 0;
-});
+  function setOpacity(enabled, opacity, transition) {
+    tintDiv.style.transition = transition ? '0.4s' : '';
+    tintDiv.style.opacity = enabled ? opacity : 0;
+  }
 
-// listen for updates
-chrome.runtime.onMessage.addListener((request) => {
-  tint.style.transition = request.active && (tint.style.opacity === 0) === request.enabled ? '0.4s' : '0s';
-  tint.style.opacity = request.enabled ? request.opacity : 0;
+  function getOpacity() {
+    return tintDiv.style.opacity || 0;
+  }
+
+  (function initialize() {
+    // grab existing tint element, or create new tint element if it doesn't already exist
+    tintDiv = document.getElementById('dark-chrome-manager');
+    if (tintDiv == null) {
+      tintDiv = document.createElement('div');
+      tintDiv.id = 'dark-chrome-manager';
+      document.documentElement.append(tintDiv);
+    }
+
+    // initialize opacity from storage
+    chrome.storage.local.get(['enabled', 'opacity'], ({ enabled, opacity }) => {
+      setOpacity(enabled == null ? true : enabled, opacity == null ? 0.7 : opacity, false);
+    });
+
+    // re-inject tintDiv if needed after page loads
+    window.addEventListener('load', () => {
+      if (tintDiv.parentElement === null) {
+        document.documentElement.append(tintDiv);
+      }
+    });
+  }());
+
+  return { setOpacity, getOpacity };
+})();
+
+
+// listen for updates from popup.js
+chrome.runtime.onMessage.addListener(({ active, enabled, opacity }) => {
+  TintManager.setOpacity(enabled, opacity, active && !TintManager.getOpacity() === enabled);
 });

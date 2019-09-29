@@ -2,50 +2,52 @@
 <html>
 
 <head>
+  <meta charset="utf-8" />
   <link rel="stylesheet" href="popup.css">
   <script src="popup.js" defer></script>
 </head>
 
 <body>
-  <div class="flex-container" style="width:275px">
+  <div class="flex-container" style="width: 275px;">
     <div class="flex-container">
-      <div><img src="images/chrome-brands.svg" style="height: 36px; vertical-align: middle"></div>
-      <div style="padding-left: 4px">
-        <div style="font-size: 24px; font-weight: bold">Dark Chrome</div>
-        <div style="font-size: 10px; text-align: right; position: relative; top: -6px">Personal Edition <span id="version"></span></div>
+      <div><img src="images/chrome-brands.svg" style="height: 36px; vertical-align: middle;"></div>
+      <div style="padding-left: 4px;">
+        <div style="font-size: 24px; font-weight: bold;">Dark Chrome</div>
+        <div style="font-size: 10px; text-align: right; position: relative; top: -6px;">Personal Edition <span
+            id="version"></span></div>
       </div>
     </div>
-    <div style="padding: 4px">
+    <div style="padding: 4px;">
       <label class="onoff-switch">
         <input type="checkbox" id="onoff">
-        <span class="onoff-slider round" id="onoffslider" style="display:none"></span>
+        <span class="onoff-slider round" id="onoffslider" style="display: none;"></span>
       </label>
     </div>
   </div>
 
-  <div style="overflow: hidden; max-height: 100px; transition: 0.4s; display: none" id="sliderbox">
-    <div class="flex-container" style="margin-top: 20px">
-      <div><img src="images/sun-regular.svg" style="height: 24px; vertical-align: middle"></div>
-      <div class="slidecontainer" style="width:70%">
-        <input type="range" min="0" max=".9" step=".01" value=".7" class="slider" id="slider">
+  <div style="overflow: hidden; max-height: 100px; transition: 0.4s; display: none;" id="sliderbox">
+    <div class="flex-container" style="margin-top: 20px;">
+      <div><img src="images/sun-regular.svg" style="height: 24px; vertical-align: middle;"></div>
+      <div class="slidecontainer" style="width: 70%;">
+        <input type="range" min=".1" max=".9" step=".01" value=".7" class="slider" id="slider">
       </div>
-      <div><img src="images/moon-solid.svg" style="height: 24px; vertical-align: middle"></div>
+      <div><img src="images/moon-solid.svg" style="height: 24px; vertical-align: middle;"></div>
     </div>
   </div>
 
   <hr>
   <div class="flex-container">
-    <div style="padding:4px"><a href="https://pinkelement.github.io/dark-chrome" target="_blank"><img
+    <div style="padding: 4px;"><a href="https://pinkelement.github.io/dark-chrome" target="_blank"><img
           src="images/info-circle-solid.svg"
-          style="height: 14px; vertical-align: middle; background: white; border-radius: 7px"></a>
+          style="height: 14px; vertical-align: middle; background: white; border-radius: 7px;"></a>
     </div>
     <div><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=582D96R5D5CBY&source=url"
         target="_blank">Donate</a></div>
   </div>
 
   <div id="tint"
-    style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:10000000;background-color:#000000;opacity:0.7;pointer-events:none;"
-    div.class="citdOverlay"></div>
+    style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 10000000; background-color: #000; opacity: 0.7; pointer-events: none;">
+  </div>
 </body>
 
 </html>
