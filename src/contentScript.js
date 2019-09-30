@@ -13,7 +13,7 @@ const TintManager = (() => {
   }
 
   function getOpacity() {
-    return tintDiv.style.opacity || 0;
+    return tintDiv.style.opacity || '0';
   }
 
   (function initialize() {
@@ -44,5 +44,5 @@ const TintManager = (() => {
 
 // listen for updates from popup.js
 chrome.runtime.onMessage.addListener(({ active, enabled, opacity }) => {
-  TintManager.setOpacity(enabled, opacity, active && !TintManager.getOpacity() === enabled);
+  TintManager.setOpacity(enabled, opacity, active && (TintManager.getOpacity() === '0') === enabled);
 });

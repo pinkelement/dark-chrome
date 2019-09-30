@@ -14,7 +14,7 @@ const UIManager = (() => {
   const sliderbox = document.getElementById('sliderbox');
 
   function update(enabled, opacity) {
-    tint.style.transition = (tint.style.opacity === 0) === enabled ? '0.4s' : '';
+    tint.style.transition = (tint.style.opacity === '0') === enabled ? '0.4s' : '';
     tint.style.opacity = enabled ? opacity : 0;
 
     sliderbox.style.height = enabled ? '50px' : 0;
