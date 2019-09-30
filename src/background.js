@@ -1,4 +1,7 @@
-// Copyright 2019 Pink Element. All rights reserved.
+/**
+ * @license
+ * Copyright 2019 Pink Element. All rights reserved.
+ */
 
 
 // execute contentScript.js in all tabs
