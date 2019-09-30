@@ -1,0 +1,49 @@
+{
+  "name": "dark-chrome",
+  "version": "0.9.2",
+  "description": "A light-weight universal dark filter for the Google Chrome browser.",
+  "main": "background.js",
+  "devDependencies": {
+    "clean-css-cli": "^4.3.0",
+    "crx": "^5.0.1",
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "stylelint": "^11.0.0",
+    "stylelint-config-standard": "^19.0.0",
+    "terser": "^4.3.4"
+  },
+  "scripts": {
+    "build": "make build",
+    "dist": "make dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pinkelement/dark-chrome.git"
+  },
+  "author": "Pink Element",
+  "bugs": {
+    "url": "https://github.com/pinkelement/dark-chrome/issues"
+  },
+  "homepage": "https://github.com/pinkelement/dark-chrome#readme",
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es6": true,
+      "webextensions": true
+    },
+    "extends": [
+      "airbnb-base"
+    ],
+    "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+      "ecmaVersion": 2018
+    }
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard"
+  }
+}
