@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="assets/vendor/primer.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/scripts.js" defer></script>
+  {% seo %}
+</head>
+
+<body>
+  <header class="top-0 width-full" style="position: sticky; background: rgba(255, 255, 255, 0.9); box-shadow: 0 0 4px black;">
+    <div class="d-flex flex-items-center flex-justify-between container-lg px-3">
+      <div class="d-flex flex-items-center flex-justify-between flex-shrink-0 mr-6">
+        <a href="https://github.com/pinkelement/dark-chrome" title="View the Project on GitHub">
+          {% octicon mark-github height:36 class:"text-gray-dark" style:"border-radius: 18px" %}</a>
+        <h1 class="no-wrap ml-1">Dark Chrome</h1>
+      </div>
+      <div class="d-flex flex-items-center flex-justify-between" style="flex-basis: 275px;">
+        <img src="images/sun-regular.svg" style="height: 24px;">
+        <div class="slidecontainer position-relative">
+          <input type="range" min=".1" max=".9" step=".01" value=".7" class="slider" id="slider" name="slider">
+
+          <div id="try-me" class="position-absolute v-hidden" style="opacity: 0;">
+            <div class="Popover-message Popover-message--top-right text-left p-4 mt-2 Box box-shadow-large">
+              <h4 class="mb-2">Try Me!</h4>
+              <p>Move the slider to change the brightness of the page.</p>
+              <button type="submit" class="btn btn-primary mt-2 text-bold">Got it!</button>
+            </div>
+          </div>
+
+        </div>
+        <img src="images/moon-solid.svg" style="height: 24px;">
+      </div>
+    </div>
+  </header>
+
+  <main class="container-lg">
+    <article class="Box markdown-body m-3 p-5">
+      {{ content }}
+    </article>
+  </main>
+</body>
+
+</html>
