@@ -23,7 +23,7 @@ The Dark Chrome browser extension does not collect any user data.
 
 ## Attributions
 ### Icons
-<img src="images/adjust-solid.svg" width="24" title="adjust"><img src="images/chrome-brands.svg" width="24" title="chrome"><img src="images/info-circle-solid.svg" width="24" title="info-circle"><img src="images/moon-solid.svg" width="24" title="moon"><img src="images/power-off-solid.svg" width="24" title="power-off"><img src="images/sun-regular.svg" width="24" title="sun">
+<img src="images/adjust-solid.svg" width="24" title="adjust"> <img src="images/chrome-brands.svg" width="24" title="chrome"> <img src="images/info-circle-solid.svg" width="24" title="info-circle"> <img src="images/moon-solid.svg" width="24" title="moon"> <img src="images/power-off-solid.svg" width="24" title="power-off"> <img src="images/sun-regular.svg" width="24" title="sun">
 
 "[Adjust](https://fontawesome.com/icons/adjust?style=solid)," "[chrome](https://fontawesome.com/icons/chrome?style=brands)," "[info-circle](https://fontawesome.com/icons/info-circle)," "[moon](https://fontawesome.com/icons/moon?style=solid)," "[power-off](https://fontawesome.com/icons/power-off?style=solid)" and "[sun](https://fontawesome.com/icons/sun?style=regular)" icons by [Font Awesome](https://fontawesome.com) are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
