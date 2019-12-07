@@ -1,3 +1,6 @@
 plugins:
   - jekyll-octicons
   - jekyll-seo-tag
+
+# Google Analytics
+google_analytics: UA-154186665-1
